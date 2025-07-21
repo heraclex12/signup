@@ -1,6 +1,6 @@
 # Simple Sign-in
 
-A modern authentication system built with Next.js 14, featuring email verification, secure sign-in, and user management. This project implements a complete authentication flow with email verification, providing a secure and user-friendly sign-up and sign-in experience.
+A modern authentication system built with Next.js 15, featuring email verification, secure sign-in, and user management. This project implements a complete authentication flow with email verification, providing a secure and user-friendly sign-up and sign-in experience.
 
 ## Features
 
@@ -30,6 +30,7 @@ A modern authentication system built with Next.js 14, featuring email verificati
   
 - 🚀 **Performance Optimized**
   - Server-side rendering with Next.js
+  - Turbopack for faster development
   - Optimized asset loading
   - Efficient database queries
   - Type-safe operations
@@ -37,21 +38,23 @@ A modern authentication system built with Next.js 14, featuring email verificati
 ## Tech Stack
 
 - **Frontend:**
-  - Next.js 14 with App Router
+  - Next.js 15 with App Router
+  - React 19
   - TypeScript for type safety
   - Tailwind CSS for styling
   - PostCSS for CSS processing
   
 - **Backend:**
   - Next.js API routes
-  - Prisma ORM
+  - Prisma ORM (v6.4)
   - SQLite database
   - NextAuth.js for authentication
   
 - **Development Tools:**
-  - ESLint for code quality
-  - TypeScript for type checking
+  - ESLint 9 for code quality
+  - TypeScript 5 for type checking
   - Prisma Studio for database management
+  - Turbopack for fast refresh
   - PostCSS plugins for CSS optimization
 
 ## Authentication Flow
@@ -125,7 +128,7 @@ yarn dev
 pnpm dev
 \`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+The development server uses Turbopack for faster refresh rates. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 ## Project Structure
 
@@ -189,17 +192,18 @@ The main authentication component (\`AuthForm.tsx\`) provides:
 
 ### Available Scripts
 
-- \`npm run dev\` - Start the development server
+- \`npm run dev\` - Start the development server with Turbopack
 - \`npm run build\` - Build the application for production
 - \`npm run start\` - Start the production server
 - \`npm run lint\` - Run ESLint to check code quality
 
 ### Development Tools
 
-- **TypeScript** - For type-safe code
-- **ESLint** - For code linting and maintaining code quality
+- **TypeScript 5** - For type-safe code
+- **ESLint 9** - For code linting and maintaining code quality
 - **PostCSS** - For processing CSS with plugins
 - **Prisma Studio** - For database management
+- **Turbopack** - For faster development experience
 
 ## Deployment
 
@@ -239,6 +243,7 @@ To learn more about the technologies used in this project:
 - [Prisma Documentation](https://www.prisma.io/docs)
 - [NextAuth.js Documentation](https://next-auth.js.org)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Turbopack Documentation](https://turbo.build/pack)
 
 ## License
 
