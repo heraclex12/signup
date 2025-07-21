@@ -1,6 +1,12 @@
 # Simple Sign-in
 
-A modern authentication system built with Next.js 15, featuring email verification, secure sign-in, and user management. This project implements a complete authentication flow with email verification, providing a secure and user-friendly sign-up and sign-in experience.
+[![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A modern authentication system built with Next.js, featuring email verification, secure sign-in, and user management. This project implements a complete authentication flow with email verification, providing a secure and user-friendly sign-up and sign-in experience.
 
 ## Features
 
@@ -38,21 +44,21 @@ A modern authentication system built with Next.js 15, featuring email verificati
 ## Tech Stack
 
 - **Frontend:**
-  - Next.js 15 with App Router
-  - React 19
+  - Next.js with App Router
+  - React
   - TypeScript for type safety
   - Tailwind CSS for styling
   - PostCSS for CSS processing
   
 - **Backend:**
   - Next.js API routes
-  - Prisma ORM (v6.4)
+  - Prisma ORM
   - SQLite database
   - NextAuth.js for authentication
   
 - **Development Tools:**
-  - ESLint 9 for code quality
-  - TypeScript 5 for type checking
+  - ESLint for code quality
+  - TypeScript for type checking
   - Prisma Studio for database management
   - Turbopack for fast refresh
   - PostCSS plugins for CSS optimization
@@ -199,11 +205,25 @@ The main authentication component (\`AuthForm.tsx\`) provides:
 
 ### Development Tools
 
-- **TypeScript 5** - For type-safe code
-- **ESLint 9** - For code linting and maintaining code quality
+- **TypeScript** - For type-safe code
+- **ESLint** - For code linting and maintaining code quality
 - **PostCSS** - For processing CSS with plugins
 - **Prisma Studio** - For database management
 - **Turbopack** - For faster development experience
+
+## Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create a new branch (\`git checkout -b feature/improvement\`)
+3. Make your changes
+4. Run tests and linting
+5. Commit your changes (\`git commit -am 'Add new feature'\`)
+6. Push to the branch (\`git push origin feature/improvement\`)
+7. Create a Pull Request
+
+Please make sure to update tests as appropriate and follow the existing code style.
 
 ## Deployment
 
@@ -247,4 +267,4 @@ To learn more about the technologies used in this project:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
