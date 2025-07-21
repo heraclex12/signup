@@ -18,7 +18,9 @@ A modern authentication system built with Next.js 14, featuring email verificati
 - **Database:** SQLite
 - **ORM:** Prisma
 - **Authentication:** NextAuth.js
-- **Styling:** Tailwind CSS
+- **Styling:** Tailwind CSS, PostCSS
+- **Linting:** ESLint
+- **Build Tool:** npm/yarn/pnpm
 
 ## Prerequisites
 
@@ -32,7 +34,7 @@ Before you begin, ensure you have:
 1. Clone the repository:
 ```bash
 git clone [repository-url]
-cd simple-sigin
+cd simple-signin
 ```
 
 2. Install dependencies:
@@ -77,18 +79,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Project Structure
 
 ```
-├── prisma/               # Database schema and migrations
-├── public/              # Static assets
+├── prisma/                # Database schema and migrations
+│   ├── migrations/        # Database migrations
+│   └── schema.prisma     # Prisma schema file
+├── public/               # Static assets
 ├── src/
-│   ├── app/            # App router pages and API routes
-│   │   ├── api/        # API endpoints
-│   │   ├── auth/       # Authentication pages
-│   │   ├── signin/     # Sign-in page
-│   │   └── signup/     # Sign-up page
-│   ├── components/     # Reusable React components
-│   ├── lib/           # Utility functions and configurations
-│   └── types/         # TypeScript type definitions
-└── ...config files
+│   ├── app/             # App router pages and API routes
+│   │   ├── api/         # API endpoints
+│   │   │   ├── auth/    # Authentication API routes
+│   │   │   ├── signup/  # Sign-up API routes
+│   │   │   └── verify/  # Email verification routes
+│   │   ├── auth/        # Authentication pages
+│   │   ├── signin/      # Sign-in page
+│   │   └── signup/      # Sign-up page
+│   ├── components/      # Reusable React components
+│   ├── lib/            # Utility functions and configurations
+│   └── types/          # TypeScript type definitions
+├── .gitignore          # Git ignore file
+├── eslint.config.mjs   # ESLint configuration
+├── next.config.ts      # Next.js configuration
+├── package.json        # Project dependencies and scripts
+├── postcss.config.mjs  # PostCSS configuration
+└── tsconfig.json       # TypeScript configuration
 ```
 
 ## API Routes
@@ -99,7 +111,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Development
 
+### Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint to check code quality
+
 The application uses Next.js 14 with the App Router. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+### Development Tools
+
+- **TypeScript** - For type-safe code
+- **ESLint** - For code linting and maintaining code quality
+- **PostCSS** - For processing CSS with plugins
 
 ## Learn More
 
