@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simple Sign-in
+
+A modern authentication system built with Next.js 14, featuring email verification, secure sign-in, and user management.
+
+## Features
+
+- 🔐 User authentication (Sign up & Sign in)
+- ✉️ Email verification system
+- 🛡️ Secure password handling
+- 🎨 Modern UI with responsive design
+- 🔄 API routes for authentication flow
+- 📦 SQLite database with Prisma ORM
+
+## Tech Stack
+
+- **Framework:** Next.js 14 with App Router
+- **Language:** TypeScript
+- **Database:** SQLite
+- **ORM:** Prisma
+- **Authentication:** NextAuth.js
+- **Styling:** Tailwind CSS
+
+## Prerequisites
+
+Before you begin, ensure you have:
+- Node.js 18+ installed
+- npm/yarn/pnpm package manager
+- Git for version control
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd simple-sigin
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Set up the database:
+```bash
+npx prisma generate
+npx prisma migrate dev
+```
+
+4. Create a `.env` file in the root directory with the following variables:
+```env
+DATABASE_URL="file:./dev.db"
+NEXTAUTH_SECRET="your-secret-key"
+NEXTAUTH_URL="http://localhost:3000"
+# Add your email service credentials
+EMAIL_SERVER_HOST=
+EMAIL_SERVER_PORT=
+EMAIL_SERVER_USER=
+EMAIL_SERVER_PASSWORD=
+EMAIL_FROM=
+```
+
+5. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── prisma/               # Database schema and migrations
+├── public/              # Static assets
+├── src/
+│   ├── app/            # App router pages and API routes
+│   │   ├── api/        # API endpoints
+│   │   ├── auth/       # Authentication pages
+│   │   ├── signin/     # Sign-in page
+│   │   └── signup/     # Sign-up page
+│   ├── components/     # Reusable React components
+│   ├── lib/           # Utility functions and configurations
+│   └── types/         # TypeScript type definitions
+└── ...config files
+```
+
+## API Routes
+
+- `POST /api/signup` - Create new user account
+- `POST /api/verify` - Verify email address
+- `POST /api/auth/[...nextauth]` - NextAuth.js authentication endpoints
+
+## Development
+
+The application uses Next.js 14 with the App Router. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Prisma Documentation](https://www.prisma.io/docs)
+- [NextAuth.js Documentation](https://next-auth.js.org)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
